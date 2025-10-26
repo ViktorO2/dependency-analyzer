@@ -34,7 +34,7 @@ npm install
 
 Create a .env file in the root directory:
 GEMINI_API_KEY=your_gemini_api_key_here
-```
+
 
 To Run API Server
 
@@ -43,3 +43,4 @@ npm start
 Run analysis from console
 
 npm run analyze
+```
