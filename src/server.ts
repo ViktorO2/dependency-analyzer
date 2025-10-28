@@ -9,7 +9,7 @@ import { analyzeDependenciesWithLLM } from "./llm/llmAnalyzer";
 
 const app=express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.post("/api/analyze",async(req,res)=>{
     try{
@@ -38,4 +38,6 @@ app.post("/api/analyze",async(req,res)=>{
 });
 
 const PORT=process.env.PORT || 3000;
-console.log("Server running on http://localhost:"+PORT);
+app.listen(PORT, ()=>{
+    console.log(`Server running on http://localhost:${PORT}`);
+})
